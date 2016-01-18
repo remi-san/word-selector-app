@@ -1,0 +1,31 @@
+{
+    "name": "remi-san/word-selector-app",
+    "description" : "",
+    "keywords": [],
+    "authors": [
+        {
+            "name": "Rémi San",
+            "email": "remi.san@gmail.com",
+            "homepage": "http://remi-san.github.io/",
+            "role": "Developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:remi-san/word-selector.git"
+        }
+    ],
+    "require": {
+        "silex/silex": "^1.3",
+        "symfony/dependency-injection": "~3.0",
+        "symfony/config" : "~3.0",
+        "symfony/yaml" : "~3.0",
+        "remi-san/word-selector": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "WordSelectorApp\\": "app/"
+        }
+    }
+}

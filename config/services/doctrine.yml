@@ -1,0 +1,13 @@
+services:
+
+    DoctrineYmlConfiguration:
+        class:     Doctrine\ORM\Configuration
+        factory:   [ Doctrine\ORM\Tools\Setup, createYAMLMetadataConfiguration ]
+        arguments: [ %orm.doctrine.yml.paths%, %orm.doctrine.devmode% ]
+        calls:
+            - [ 'addCustomNumericFunction', [ 'RANDOM', 'WordSelector\Util\Doctrine\Random' ] ]
+
+    EntityManager:
+        class:     Doctrine\ORM\EntityManager
+        factory:   [ Doctrine\ORM\EntityManager, create ]
+        arguments: [ %orm.doctrine.db%, '@DoctrineYmlConfiguration' ]

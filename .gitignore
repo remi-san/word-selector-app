@@ -1,0 +1,5 @@
+/vendor
+
+/tests/output
+
+/cache/*Container.php*

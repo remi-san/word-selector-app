@@ -1,0 +1,34 @@
+WordSelector\Entity\Word:
+  type: entity
+  repositoryClass: WordSelector\Repository\WordRepository
+  table: word
+  schema: wordselector
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    word:
+      column: word
+      type: string
+      length: 45
+      nullable: false
+    lang:
+      column: lang
+      type: string
+      length: 2
+      nullable: false
+    length:
+      column: len
+      type: integer
+      nullable: true
+    nbLetters:
+      column: letters_nb
+      type: integer
+      length: 45
+      nullable: true
+    complexity:
+      column: complexity
+      type: float
+      nullable: true

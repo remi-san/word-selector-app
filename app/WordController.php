@@ -1,0 +1,41 @@
+<?php
+namespace WordSelectorApp;
+
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use WordSelector\WordSelector;
+
+class WordController
+{
+    /**
+     * @var WordSelector
+     */
+    private $wordSelector;
+
+    public function __construct(WordSelector $wordSelector)
+    {
+        $this->wordSelector = $wordSelector;
+    }
+
+    public function random(Request $request)
+    {
+        $headers = [ 'Content-Type' => 'application/json' ];
+
+        $length = $request->get('length') ? : 5;
+        $lang = $request->get('lang') ? : 'en';
+        $complexity = $request->get('complexity') ? : null;
+
+        $word = null;
+        try {
+            $word = $this->wordSelector->getRandomWord($length, $lang, $complexity);
+        } catch (\InvalidArgumentException $e) {
+            return new Response('', Response::HTTP_NOT_FOUND, $headers);
+        }
+
+        return new Response(
+            json_encode([ 'word' => $word ]),
+            Response::HTTP_OK,
+            $headers
+        );
+    }
+}
