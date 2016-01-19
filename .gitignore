@@ -3,3 +3,5 @@
 /tests/output
 
 /cache/*Container.php*
+
+/config/parameters/values.yml

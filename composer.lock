@@ -696,7 +696,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:remi-san/word-selector.git",
-                "reference": "8fd630e42a1e615887be1dc2512d6a6eefd38e93"
+                "reference": "1e4b8ee214d2bde99a4325c15100873423f36df1"
             },
             "require": {
                 "doctrine/orm": "~2.4"
@@ -726,7 +726,7 @@
             "keywords": [
                 "Game"
             ],
-            "time": "2016-01-17 20:45:02"
+            "time": "2016-01-19 08:07:59"
         },
         {
             "name": "silex/silex",

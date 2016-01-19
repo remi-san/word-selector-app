@@ -29,7 +29,7 @@ class WordController
         try {
             $word = $this->wordSelector->getRandomWord($length, $lang, $complexity);
         } catch (\InvalidArgumentException $e) {
-            return new Response('', Response::HTTP_NOT_FOUND, $headers);
+            return new Response(json_encode([ 'error' => $e->getMessage() ]), Response::HTTP_NOT_FOUND, $headers);
         }
 
         return new Response(
