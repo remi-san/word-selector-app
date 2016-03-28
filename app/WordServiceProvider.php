@@ -3,11 +3,11 @@ namespace WordSelectorApp;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Tools\Setup;
+use Doctrine\Tools\Random;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
 use WordSelector\StoredWordSelector;
 use WordSelector\Entity\DoctrineWord;
-use WordSelector\Util\Doctrine\Random;
 
 class WordServiceProvider implements ServiceProviderInterface
 {

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1f7d3814ac85f37e602b9d0617487390",
-    "content-hash": "6822bbea313a35f114f25cf850af1ca2",
+    "hash": "bd186604b11ba6c67dc7bb559de4809a",
+    "content-hash": "4ca8289a7415b08bca4ed59ff03abea8",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -689,6 +689,55 @@
                 "psr-3"
             ],
             "time": "2012-12-21 11:40:51"
+        },
+        {
+            "name": "remi-san/doctrine-tools",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/remi-san/doctrine-tools.git",
+                "reference": "13de5a8a7e4f2930dda3121692d7c2cdd8208ff5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/remi-san/doctrine-tools/zipball/13de5a8a7e4f2930dda3121692d7c2cdd8208ff5",
+                "reference": "13de5a8a7e4f2930dda3121692d7c2cdd8208ff5",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/orm": "^2.5",
+                "psr/log": "^1.0"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "^1.10",
+                "mockery/mockery": "^0.9",
+                "phpunit/phpunit": "^4.5",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Tools\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rémi San",
+                    "email": "remi.san@gmail.com",
+                    "homepage": "http://remi-san.github.io/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A set of tools for Doctrine",
+            "keywords": [
+                "doctrine",
+                "tools"
+            ],
+            "time": "2016-03-28 19:18:05"
         },
         {
             "name": "remi-san/word-selector",
