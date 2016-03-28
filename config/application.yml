@@ -1,4 +1,0 @@
-imports:
-    - { resource: "services/doctrine.yml" }
-    - { resource: "services/word.yml" }
-    - { resource: "parameters/values.yml" }

@@ -1,29 +1,37 @@
 <?php
 namespace WordSelectorApp;
 
+use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\Tools\Setup;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
-use Symfony\Component\Config\FileLocator;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use WordSelector\DoctrineWordSelector;
+use WordSelector\Entity\Word;
+use WordSelector\Util\Doctrine\Random;
 
 class WordServiceProvider implements ServiceProviderInterface
 {
     public function register(Application $app)
     {
-        $app['dependency.injector'] = $app->share(function () {
-            $containerBuilder = new ContainerBuilder();
-            $loader = new YamlFileLoader(
-                $containerBuilder,
-                new FileLocator(__DIR__ . '/../config')
-            );
-            $loader->load('application.yml');
+        $config = json_decode(file_get_contents(__DIR__ . '/../config/parameters.json'), true);
 
-            return $containerBuilder;
+        $conn = $config["orm.doctrine.db"];
+        $paths = $config["orm.doctrine.yml.paths"];
+        $devMode = $config["orm.doctrine.devmode"];
+
+        $app['entity.manager'] = $app->share(function () use ($conn, $paths, $devMode) {
+            $config = Setup::createYAMLMetadataConfiguration($paths, $devMode);
+            $config->addCustomNumericFunction('RANDOM', Random::class);
+            return EntityManager::create($conn, $config);
+        });
+
+        $app['word.selector'] = $app->share(function () use ($app) {
+            $repository = $app['entity.manager']->getRepository(Word::class);
+            return new DoctrineWordSelector($repository);
         });
 
         $app['word.controller'] = $app->share(function () use ($app) {
-            return new WordController($app['dependency.injector']->get('WordSelector'));
+            return new WordController($app['word.selector']);
         });
     }
 
