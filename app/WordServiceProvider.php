@@ -5,8 +5,8 @@ use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Tools\Setup;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
-use WordSelector\DoctrineWordSelector;
-use WordSelector\Entity\Word;
+use WordSelector\StoredWordSelector;
+use WordSelector\Entity\DoctrineWord;
 use WordSelector\Util\Doctrine\Random;
 
 class WordServiceProvider implements ServiceProviderInterface
@@ -26,8 +26,8 @@ class WordServiceProvider implements ServiceProviderInterface
         });
 
         $app['word.selector'] = $app->share(function () use ($app) {
-            $repository = $app['entity.manager']->getRepository(Word::class);
-            return new DoctrineWordSelector($repository);
+            $repository = $app['entity.manager']->getRepository(DoctrineWord::class);
+            return new StoredWordSelector($repository);
         });
 
         $app['word.controller'] = $app->share(function () use ($app) {

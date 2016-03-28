@@ -33,7 +33,7 @@ class WordController
         }
 
         return new Response(
-            json_encode([ 'word' => $word ]),
+            json_encode($word),
             Response::HTTP_OK,
             $headers
         );

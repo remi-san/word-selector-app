@@ -1,6 +1,6 @@
-WordSelector\Entity\Word:
+WordSelector\Entity\DoctrineWord:
   type: entity
-  repositoryClass: WordSelector\Repository\WordRepository
+  repositoryClass: WordSelector\Repository\DoctrineWordRepository
   table: word
   schema: wordselector
   id:

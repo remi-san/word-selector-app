@@ -1,3 +1,5 @@
 /vendor
 
 /config/parameters.json
+
+/tests/output
