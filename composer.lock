@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bd186604b11ba6c67dc7bb559de4809a",
-    "content-hash": "4ca8289a7415b08bca4ed59ff03abea8",
+    "hash": "bab8176ee51443b6aabfefbc0efec810",
+    "content-hash": "cde0e7fddf5f5906576fb5b1c9b4197a",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -744,8 +744,14 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git@bitbucket.org:remi-san/word-selector.git",
+                "url": "https://github.com/remi-san/word-selector.git",
                 "reference": "a15830c4a3de64c8fc4be68c2f8ccb7eb7a986e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/remi-san/word-selector/zipball/a15830c4a3de64c8fc4be68c2f8ccb7eb7a986e4",
+                "reference": "a15830c4a3de64c8fc4be68c2f8ccb7eb7a986e4",
+                "shasum": ""
             },
             "require-dev": {
                 "mockery/mockery": "~0.9",
@@ -776,6 +782,10 @@
             "keywords": [
                 "Game"
             ],
+            "support": {
+                "source": "https://github.com/remi-san/word-selector/tree/master",
+                "issues": "https://github.com/remi-san/word-selector/issues"
+            },
             "time": "2016-03-28 18:37:03"
         },
         {
