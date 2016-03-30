@@ -1,6 +1,6 @@
 <?php
 
-namespace WordSelectorApp\DependencyInjection;
+namespace WordSelectorapp\DependencyInjection;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Tools\Setup;

@@ -62,7 +62,7 @@ class DoctrineWord extends Word implements \JsonSerializable
      */
     protected function complexity()
     {
-        return ($this->nbLetters*$this->nbLetters*$this->nbLetters)/($this->length*$this->length);
+        return (float) ($this->nbLetters*$this->nbLetters*$this->nbLetters)/($this->length*$this->length);
     }
 
     /**
