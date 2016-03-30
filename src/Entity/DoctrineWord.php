@@ -1,4 +1,5 @@
 <?php
+
 namespace WordSelector\Entity;
 
 class DoctrineWord extends Word implements \JsonSerializable

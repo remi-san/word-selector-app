@@ -1,19 +1,28 @@
 <?php
-namespace WordSelectorApp;
+
+namespace WordSelectorApp\DependencyInjection;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\Tools\Random;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
-use WordSelector\StoredWordSelector;
 use WordSelector\Entity\DoctrineWord;
+use WordSelector\StoredWordSelector;
+use WordSelectorApp\Controller\WordController;
 
+/**
+ * Class WordServiceProvider
+ *
+ * @package WordSelectorApp\DependencyInjection
+ *
+ * @codeCoverageIgnore
+ */
 class WordServiceProvider implements ServiceProviderInterface
 {
     public function register(Application $app)
     {
-        $config = json_decode(file_get_contents(__DIR__ . '/../config/parameters.json'), true);
+        $config = json_decode(file_get_contents(__DIR__ . '/../../config/parameters.json'), true);
 
         $conn = $config["orm.doctrine.db"];
         $paths = $config["orm.doctrine.yml.paths"];

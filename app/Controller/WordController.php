@@ -1,10 +1,16 @@
 <?php
-namespace WordSelectorApp;
+
+namespace WordSelectorApp\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use WordSelector\WordSelector;
 
+/**
+ * Class WordController
+ *
+ * @package WordSelectorApp\Controller
+ */
 class WordController
 {
     /**
