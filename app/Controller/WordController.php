@@ -27,9 +27,9 @@ class WordController
     {
         $headers = [ 'Content-Type' => 'application/json' ];
 
-        $length = $request->get('length') ? : 5;
-        $lang = $request->get('lang') ? : 'en';
-        $complexity = $request->get('complexity') ? : null;
+        $length = $request->get('length', 5);
+        $lang = $request->get('lang', 'en');
+        $complexity = $request->get('complexity');
 
         $word = null;
         try {
