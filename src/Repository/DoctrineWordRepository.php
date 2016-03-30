@@ -23,7 +23,7 @@ class DoctrineWordRepository extends EntityRepository implements WordRepository
     public function getRandomWord($length, $lang, $complexity = null)
     {
         $dql  = 'SELECT w, RANDOM() as HIDDEN random ';
-        $dql .= 'FROM ' . DoctrineWord::class . ' w ';
+        $dql .= 'FROM ' . $this->getClassName() . ' w ';
         $dql .= 'WHERE w.length = :length ';
         $dql .= 'AND w.lang = :lang ';
         $dql .= 'ORDER BY random';
