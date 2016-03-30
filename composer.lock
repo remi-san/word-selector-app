@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cd80d2666ab3d52f76ae94bc97879e16",
-    "content-hash": "26ef4be8647265574f19bb9248cd2a70",
+    "hash": "bdf88fa2f75279ca9710dd8dd40b1898",
+    "content-hash": "90b10c43fd13a514b6c212122f300016",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -741,23 +741,23 @@
         },
         {
             "name": "remi-san/word-selector",
-            "version": "dev-master",
+            "version": "v0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/remi-san/word-selector.git",
-                "reference": "a15830c4a3de64c8fc4be68c2f8ccb7eb7a986e4"
+                "reference": "553a93e4b1c65a46e064c222ed91f754308c1f31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/remi-san/word-selector/zipball/a15830c4a3de64c8fc4be68c2f8ccb7eb7a986e4",
-                "reference": "a15830c4a3de64c8fc4be68c2f8ccb7eb7a986e4",
+                "url": "https://api.github.com/repos/remi-san/word-selector/zipball/553a93e4b1c65a46e064c222ed91f754308c1f31",
+                "reference": "553a93e4b1c65a46e064c222ed91f754308c1f31",
                 "shasum": ""
             },
             "require-dev": {
+                "fabpot/php-cs-fixer": "^1.10",
                 "mockery/mockery": "~0.9",
                 "phpunit/phpunit": "~4.5",
-                "symfony/config": "~2.6",
-                "symfony/dependency-injection": "~2.6"
+                "squizlabs/php_codesniffer": "~2.0"
             },
             "type": "library",
             "autoload": {
@@ -770,6 +770,9 @@
                     "WordSelector\\Test\\": "tests/unit/"
                 }
             },
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "Rémi San",
@@ -780,13 +783,14 @@
             ],
             "description": "A word selector.",
             "keywords": [
-                "Game"
+                "Lib",
+                "Word"
             ],
             "support": {
-                "source": "https://github.com/remi-san/word-selector/tree/master",
+                "source": "https://github.com/remi-san/word-selector/tree/v0.1.0",
                 "issues": "https://github.com/remi-san/word-selector/issues"
             },
-            "time": "2016-03-28 18:37:03"
+            "time": "2016-03-30 21:26:22"
         },
         {
             "name": "silex/silex",
@@ -2652,9 +2656,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "remi-san/word-selector": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

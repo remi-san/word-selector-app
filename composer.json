@@ -22,7 +22,7 @@
         "symfony/yaml" : "~3.0",
         "doctrine/orm": "~2.4",
         "remi-san/doctrine-tools": "^0.2",
-        "remi-san/word-selector": "dev-master"
+        "remi-san/word-selector": "^0.1"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.5",
