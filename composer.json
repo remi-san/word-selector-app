@@ -11,12 +11,6 @@
             "role": "Developer"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@github.com:remi-san/word-selector.git"
-        }
-    ],
     "require": {
         "silex/silex": "^1.3",
         "symfony/yaml" : "~3.0",
