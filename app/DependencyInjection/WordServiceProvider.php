@@ -1,6 +1,6 @@
 <?php
 
-namespace WordSelectorapp\DependencyInjection;
+namespace WordSelectorApp\DependencyInjection;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Tools\Setup;
@@ -26,10 +26,12 @@ class WordServiceProvider implements ServiceProviderInterface
 
         $conn = $config["orm.doctrine.db"];
         $paths = $config["orm.doctrine.yml.paths"];
-        $devMode = $config["orm.doctrine.devmode"];
+        $debug = $config["debug"];
 
-        $app['entity.manager'] = $app->share(function () use ($conn, $paths, $devMode) {
-            $config = Setup::createYAMLMetadataConfiguration($paths, $devMode);
+        $app['debug'] = $debug;
+
+        $app['entity.manager'] = $app->share(function () use ($conn, $paths, $debug) {
+            $config = Setup::createYAMLMetadataConfiguration($paths, $debug);
             $config->addCustomNumericFunction('RANDOM', Random::class);
             return EntityManager::create($conn, $config);
         });

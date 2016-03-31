@@ -1,6 +1,6 @@
 <?php
 
-namespace WordSelectorapp\Controller;
+namespace WordSelectorApp\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
