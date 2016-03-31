@@ -26,13 +26,13 @@
     },
     "autoload": {
         "psr-4": {
-            "WordSelectorApp\\": "app/",
+            "WordSelector\\App\\": "app/",
             "WordSelector\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "WordSelectorApp\\Test\\" : "tests/unit/"
+            "WordSelector\\App\\Test\\" : "tests/unit/"
         }
     }
 }

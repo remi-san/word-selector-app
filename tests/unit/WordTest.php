@@ -1,5 +1,5 @@
 <?php
-namespace WordSelectorApp\Test;
+namespace WordSelector\App\Test;
 
 use WordSelector\Entity\DoctrineWord;
 

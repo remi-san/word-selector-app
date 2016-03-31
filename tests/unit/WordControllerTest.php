@@ -1,11 +1,11 @@
 <?php
 
-namespace WordSelectorApp\Test;
+namespace WordSelector\App\Test;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use WordSelector\WordSelector;
-use WordSelectorApp\Controller\WordController;
+use WordSelector\App\Controller\WordController;
 
 class WordControllerTest extends \PHPUnit_Framework_TestCase
 {

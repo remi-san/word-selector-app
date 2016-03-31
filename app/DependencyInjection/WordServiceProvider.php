@@ -1,15 +1,15 @@
 <?php
 
-namespace WordSelectorApp\DependencyInjection;
+namespace WordSelector\App\DependencyInjection;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\Tools\Random;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
+use WordSelector\App\Controller\WordController;
 use WordSelector\Entity\DoctrineWord;
 use WordSelector\StoredWordSelector;
-use WordSelectorApp\Controller\WordController;
 
 /**
  * Class WordServiceProvider
